@@ -46,3 +46,26 @@ Project-based learning approach can be said to be one of the main traits of DATA
 8. GitHub Presence!
 
 
+# Wroking with HMDA dataset
+The Home Mortgage Disclosure Act of 1975 requires lenders to maintain and publicly report information about mortgage loans. This data can be beneficial in analyzing lending patterns and is instrumental in detecting discrimination.
+# Key Variables for Analysis
+To analyze discrimination patterns in the DMV area, I want to focus on the following variables from HMDA data:
+1. Income: This can show whether or not there is discrimination by income when it comes to loaning money.
+2. Gender: This can assist in revealing the gender bias in lending.
+3. Race: This can be used to identify racial discrimination in the provision of mortgages.
+4. Place: Comparing the lending data for various areas in the DMV region will allow you to ascertain disparities geographically.
+5. Age: This can go a long way in explaining whether or not age-biased mortgage lending exists.
+6. Loan Agency (Company): Examining data by lender shows differences in the behaviors of different lender companies.
+
+
+# Analysis statistical method plan
+1. Regression Analysis may be used to transform the number of loans approved into the variables of interest. Most of the time, the coefficients of each variable in a regression model indicate whether they are strongly correlated with loan approval or not.
+2. Disparate Impact Analysis: This method measures the degree of variability of the rate of loan approvals between the groups. If the rate of approvals for one group is much lower than that for the other group, it can be said that disparate impact discrimination has taken place.
+3. Disparate Treatment Analysis: This means going through the loan application files to look for instances of prejudice, as inspired by the law. It can be much harder to do because one has to provide actual evidence of intent on the part of the discriminating party.
+
+
+# Research Questions
+1. To what extent does the DMV area approve differences in mortgage loans based on income, gender, race, place, age, and agency?
+2. Is the probability of being approved for a mortgage loan high or low within the DMV, and does it differ geographically?
+3. Is there stratified or digressive rationality in mortgage lending in the DMV area?
+
