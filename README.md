@@ -52,8 +52,8 @@ The Home Mortgage Disclosure Act of 1975 requires lenders to maintain and public
 # Key Variables for Analysis
 To analyze discrimination patterns in the DMV area, I want to focus on the following variables from HMDA data:
 1. Income: This can show whether or not there is discrimination by income when it comes to loaning money.
-2. Sex: This can assist in revealing the gender bias in lending.
-3. Race: This can be used to identify racial discrimination in the provision of mortgages.
+2. Sex: This can assist in revealing the sex bias in lending.
+3. Ethnicity: This can be used to identify racial discrimination in the provision of mortgages.
 4. Places - Geographic unit: Comparing the lending data for various areas in the DMV region - Likely census tract/ county code 
 5. Age: This can go a long way in explaining whether or not age-biased mortgage lending exists.
 6. Lender(Financial institution): Examining data by lender shows differences in the behaviors of different lender companies.
@@ -66,7 +66,7 @@ To analyze discrimination patterns in the DMV area, I want to focus on the follo
 
 
 # Research Questions
-1. To what extent does the DMV area approve differences in mortgage loans based on income, gender, race, place, age, and agency?
-2. Is the probability of being approved for a mortgage loan high or low within the DMV, and does it differ geographically?
-3. Is there stratified or digressive rationality in mortgage lending in the DMV area?
+1. To what extent does the DMV area approve differences in mortgage loans based on income, sex, Ethnicity, place, age, and lender(financial institution)?
+3. Is the probability of being approved for a mortgage loan high or low within the DMV, and does it differ geographically?
+4. Is there stratified or digressive rationality in mortgage lending in the DMV area?
 
