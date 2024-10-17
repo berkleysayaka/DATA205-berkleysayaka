@@ -46,9 +46,59 @@ One of the main traits of DATA 205 is the project-based learning approach. Stude
 
 
 # Working with HMDA dataset
-The Home Mortgage Disclosure Act of 1975 requires lenders to maintain and publicly report information about mortgage loans. This data can be beneficial in analyzing lending patterns and is instrumental in detecting discrimination.
+
+The Consumer Financial Protection Bureau (CFPB) CFPB's “core mission is to ensure that when Americans apply for a mortgage, choose a credit card, or use any other financial product, the markets work for them.”
+The CFPB's mission is to protect consumers in the same way as for other financial products, including mortgages.
+
+The Home Mortgage Disclosure Act (HMDA) of 1975 requires lenders to maintain and publicly report information about mortgage loans. This data can be beneficial in analyzing lending patterns and is instrumental in detecting discrimination.
+1. Monitoring for Fraud: The CFPB is monitoring lenders (banks, mortgage companies, etc.) that provide mortgages to make sure they are not committing fraud, such as providing false information or charging unreasonable fees.
+2. Improving Disclosure: The CFPB is helping consumers understand the contents of their mortgage contracts accurately by disclosing information about mortgages in an easy-to-understand manner.
+3. Support for borrowers experiencing difficulty repaying their loans: We provide appropriate advice and support to borrowers experiencing difficulty repaying their loans.
+4. Rules for mortgages: We formulate rules for mortgages to regulate the actions of lenders.
 
 
+# The reason why the CFPB is tackling the mortgage issue
+The bursting of the housing bubble in the wake of the Lehman Shock in 2008 caused many consumers to be treated unfairly in relation to their mortgages, and this led to a serious problem in which many people lost their homes. In light of this situation, the CFPB aims to eradicate unfair practices and opaque practices in the mortgage market and to create an environment in which consumers can use mortgages with peace of mind.
+
+# CFPB's Mortgage Initiatives and New Discoveries through DynamicData Analysis
+The specific initiatives that the CFPB is taking with regard to mortgages are extremely important from the perspective of consumer protection. By analyzing these initiatives using the DynamicData tool with data from 2018 to 2022, we may be able to gain deeper insights.
+
+# Expected Results from DynamicData Analysis
+By analyzing data from the four initiatives above using DynamicData, the following may become clear
+
+- Research Questions - 
+1. Changes in fraud patterns:
+a. Which types of fraud are occurring frequently, and how are these trends changing year by year?
+b. Which types of lenders are most frequently involved in fraud?
+c. Are there any regions or attributes where fraud is concentrated?
+
+2. Effects of improved disclosure:
+a. Has the level of understanding among consumers improved as a result of improved information disclosure?
+b. Has the number of complaints from consumers decreased?
+c. Has the number of contracts based on incorrect information decreased?
+
+3. Effectiveness of support for borrowers experiencing repayment difficulties:
+a. What is the usage rate of support programs for borrowers experiencing repayment difficulties?
+b. Is there anything that can be done to improve the effectiveness of these support programs?
+c. Has the number of cases of debt restructuring and bankruptcy decreased?
+
+4.Understanding trends through time-series analysis:
+a. The relationship with trends in the overall mortgage market.
+b. the impact of economic fluctuations and policy changes on fraud and consumer damage.
+c. changes in consumer awareness and behavior.
+
+
+# What can be expected from the analysis results?
+1. More effective consumer protection measures: identifying fraud hotspots and areas where consumers are particularly suffering
+2. Sound development of the industry as a whole: By curbing fraudulent activities and restoring consumer confidence, it is possible to contribute to the sound development of the mortgage market as a whole.
+3. Contributing to policy making: Based on the results of the analysis, it is possible to contribute to policy making related to mortgages.
+
+# Points to note when analyzing
+1. Data quality: To check the accuracy, comprehensiveness, and consistency of the data.
+2. Analysis method: To select an appropriate analysis method that matches your analysis objectives.
+3. Identifying causal relationships: You need to be careful not to confuse correlation and causation.
+4. External factors: You need to consider the impact of external factors such as economic fluctuations and policy changes.
+   
 # Key Variables for Analysis
 To analyze discrimination patterns in the DMV area, I want to focus on the following variables from HMDA data:
 1. Income: This can show whether or not there is discrimination by income when it comes to loaning money.
@@ -58,15 +108,9 @@ To analyze discrimination patterns in the DMV area, I want to focus on the follo
 5. Age: This can go a long way in explaining whether or not age-biased mortgage lending exists.
 6. Lender(Financial institution): Examining data by lender shows differences in the behaviors of different lender companies.
 
-
-# Analysis of statistical method plan
-1. Regression Analysis may be used to transform the number of loans approved into the variables of interest. Usually, the coefficients of each variable in a regression model indicate whether it is strongly correlated with loan approval or not.
-2. Disparate Impact Analysis: This method measures the degree of variability in the rate of loan approvals between the groups. If the rate of approvals for one group is much lower than that for the other group, it can be said that disparate impact discrimination has taken place.
-3. Disparate Treatment Analysis: This means going through the loan application files to look for instances of prejudice, as inspired by the law. It can be much harder to do because one has to provide actual evidence of intent on the part of the discriminating party.
+# Summary
+Analyzing the CFPB's initiatives regarding mortgages using DynamicData is an important step towards strengthening consumer protection and contributing to the sound development of the mortgage market. It is hoped that, based on the results of the analysis, more effective consumer protection measures will be formulated and the transparency of the mortgage market will be increased.
 
 
-# Research Questions
-1. To what extent does the DMV area approve differences in mortgage loans based on income, sex, Ethnicity, place, age, and lender(financial institution)?
-3. Is the probability of being approved for a mortgage loan high or low within the DMV, and does it differ geographically?
-4. Is there stratified or digressive rationality in mortgage lending in the DMV area?
+
 
