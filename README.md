@@ -47,33 +47,33 @@ One of the main traits of DATA 205 is the project-based learning approach. Stude
 
 # Working with HMDA dataset
 
-The Consumer Financial Protection Bureau (CFPB) CFPB's “core mission is to ensure that when Americans apply for a mortgage, choose a credit card, or use any other financial product, the markets work for them.”
-The CFPB's mission is to protect consumers in the same way as for other financial products, including mortgages.
+The Consumer Financial Protection Bureau's (CFPB) CFPB's "core mission is to ensure that when Americans apply for a mortgage, choose a credit card, or use any other financial product, the markets work for them."
+The CFPB's mission is to protect consumers of financial products, including mortgages, in the same way it protects other consumers.
 
 The Home Mortgage Disclosure Act (HMDA) of 1975 requires lenders to maintain and publicly report information about mortgage loans. This data can be beneficial in analyzing lending patterns and is instrumental in detecting discrimination.
-1. Monitoring for Fraud: The CFPB is monitoring lenders (banks, mortgage companies, etc.) that provide mortgages to make sure they are not committing fraud, such as providing false information or charging unreasonable fees.
+1. Monitoring for Fraud: The CFPB monitors lenders (banks, mortgage companies, etc.) that provide mortgages to ensure they are not committing fraud, such as providing false information or charging unreasonable fees.
 2. Improving Disclosure: The CFPB is helping consumers understand the contents of their mortgage contracts accurately by disclosing information about mortgages in an easy-to-understand manner.
 3. Support for borrowers experiencing difficulty repaying their loans: We provide appropriate advice and support to borrowers experiencing difficulty repaying their loans.
-4. Rules for mortgages: We formulate rules for mortgages to regulate the actions of lenders.
+4. Rules for mortgages: We formulate rules to regulate lenders' actions.
 
 
 # The reason why the CFPB is tackling the mortgage issue
-The bursting of the housing bubble in the wake of the Lehman Shock in 2008 caused many consumers to be treated unfairly in relation to their mortgages, and this led to a serious problem in which many people lost their homes. In light of this situation, the CFPB aims to eradicate unfair practices and opaque practices in the mortgage market and to create an environment in which consumers can use mortgages with peace of mind.
+The bursting of the housing bubble in the wake of the Lehman Shock in 2008 caused many consumers to be treated unfairly regarding their mortgages, leading to a serious problem in which many people lost their homes. In light of this situation, the CFPB aims to eradicate unfair and opaque practices in the mortgage market and create an environment in which consumers can use mortgages with peace of mind.
 
 # CFPB's Mortgage Initiatives and New Discoveries through DynamicData Analysis
-The specific initiatives that the CFPB is taking with regard to mortgages are extremely important from the perspective of consumer protection. By analyzing these initiatives using the DynamicData tool with data from 2018 to 2022, we may be able to gain deeper insights.
+The specific initiatives that the CFPB is taking regarding mortgages are extremely important from the perspective of consumer protection. By analyzing these initiatives using the DynamicData tool with data from 2018 to 2022, we may gain deeper insights.
 
 # Expected Results from DynamicData Analysis
-By analyzing data from the four initiatives above using DynamicData, the following may become clear
+By analyzing data from the four initiatives above using DynamicData, the following may become clear.
 
 - Research Questions - 
 1. Changes in fraud patterns:
-a. Which types of fraud are occurring frequently, and how are these trends changing year by year?
+a. Which types of fraud occur frequently, and how do these trends change year by year?
 b. Which types of lenders are most frequently involved in fraud?
 c. Are there any regions or attributes where fraud is concentrated?
 
 2. Effects of improved disclosure:
-a. Has the level of understanding among consumers improved as a result of improved information disclosure?
+a. Has consumers' understanding level improved due to improved information disclosure?
 b. Has the number of complaints from consumers decreased?
 c. Has the number of contracts based on incorrect information decreased?
 
@@ -82,22 +82,22 @@ a. What is the usage rate of support programs for borrowers experiencing repayme
 b. Is there anything that can be done to improve the effectiveness of these support programs?
 c. Has the number of cases of debt restructuring and bankruptcy decreased?
 
-4.Understanding trends through time-series analysis:
+4. Understanding trends through time-series analysis:
 a. The relationship with trends in the overall mortgage market.
-b. the impact of economic fluctuations and policy changes on fraud and consumer damage.
-c. changes in consumer awareness and behavior.
+b. Economic fluctuations and policy changes impact fraud and consumer damage.
+c. Changes in consumer awareness and behavior.
 
 
 # What can be expected from the analysis results?
 1. More effective consumer protection measures: identifying fraud hotspots and areas where consumers are particularly suffering
-2. Sound development of the industry as a whole: By curbing fraudulent activities and restoring consumer confidence, it is possible to contribute to the sound development of the mortgage market as a whole.
-3. Contributing to policy making: Based on the results of the analysis, it is possible to contribute to policy making related to mortgages.
+2. Sound development of the industry as a whole: Curbing fraudulent activities and restoring consumer confidence can contribute to the sound development of the mortgage market as a whole.
+3. Contributing to policy making: Based on the analysis's results, it is possible to contribute to policy making related to mortgages.
 
 # Points to note when analyzing
-1. Data quality: To check the accuracy, comprehensiveness, and consistency of the data.
-2. Analysis method: To select an appropriate analysis method that matches your analysis objectives.
-3. Identifying causal relationships: You need to be careful not to confuse correlation and causation.
-4. External factors: You need to consider the impact of external factors such as economic fluctuations and policy changes.
+1. Data quality: To check the data's accuracy, comprehensiveness, and consistency.
+2. Analysis method: Select an appropriate method matching analysis objectives.
+3. Identifying causal relationships: Avoid confusing correlation and causation.
+4. External factors: To consider the impact of external factors such as economic fluctuations and policy changes.
    
 # Key Variables for Analysis
 To analyze discrimination patterns in the DMV area, I want to focus on the following variables from HMDA data:
@@ -109,8 +109,7 @@ To analyze discrimination patterns in the DMV area, I want to focus on the follo
 6. Lender(Financial institution): Examining data by lender shows differences in the behaviors of different lender companies.
 
 # Summary
-Analyzing the CFPB's initiatives regarding mortgages using DynamicData is an important step towards strengthening consumer protection and contributing to the sound development of the mortgage market. It is hoped that, based on the results of the analysis, more effective consumer protection measures will be formulated and the transparency of the mortgage market will be increased.
-
+Analyzing the CFPB's initiatives regarding mortgages using DynamicData is an important step towards strengthening consumer protection and contributing to the sound development of the mortgage market. Based on the analysis's results, it is hoped that more effective consumer protection measures will be formulated and the transparency of the mortgage market will be increased.
 
 
 
