@@ -1,0 +1,125 @@
+#DMV_LAR_2018_2022_2
+WITH RankedData AS (
+  SELECT
+    lar.year,
+    lar.state_code,
+    lar.county_code,
+    lar.derived_loan_product_type,
+    lar.derived_dwelling_category,
+    lar.derived_ethnicity,
+    lar.derived_race,
+    lar.derived_sex,
+	lar.applicant_age,
+    AVG(CASE WHEN lar.loan_amount IS NOT NULL AND lar.loan_amount NOT IN ('NA', 'Exempt') THEN lar.loan_amount::numeric ELSE NULL END) AS avg_loan_amount,
+    AVG(CASE WHEN lar.combined_loan_to_value_ratio IS NOT NULL AND lar.combined_loan_to_value_ratio NOT IN ('NA', 'Exempt') THEN lar.combined_loan_to_value_ratio::numeric ELSE NULL END) AS avg_cltv,
+    AVG(CASE WHEN lar.interest_rate IS NOT NULL AND lar.interest_rate NOT IN ('NA', 'Exempt') THEN lar.interest_rate::numeric ELSE NULL END) AS avg_interest_rate,
+    AVG(CASE WHEN lar.total_loan_costs IS NOT NULL AND lar.total_loan_costs NOT IN ('NA', 'Exempt') THEN lar.total_loan_costs::numeric ELSE NULL END) AS avg_total_loan_costs,
+    AVG(CASE WHEN lar.income IS NOT NULL AND lar.income NOT IN ('NA', 'Exempt') THEN lar.income::numeric ELSE NULL END) AS avg_income,
+    -- ... other columns ...
+    ROW_NUMBER() OVER (PARTITION BY lar.year, lar.state_code ORDER BY AVG(lar.loan_amount::numeric) DESC) AS row_num
+  FROM
+    (
+      SELECT '2018' AS year, * FROM hmda_public.lar_2018
+      UNION ALL
+      SELECT '2019' AS year, * FROM hmda_public.lar_2019
+      UNION ALL
+      SELECT '2020' AS year, * FROM hmda_public.lar_2020
+      UNION ALL
+      SELECT '2021' AS year, * FROM hmda_public.lar_2021
+	  UNION ALL
+	  SELECT '2022' AS year, * FROM hmda_public.lar_2022
+    ) AS lar
+  WHERE
+    lar.state_code IN ('VA', 'MD', 'DC')
+  GROUP BY
+    lar.year, lar.state_code, lar.county_code, lar.derived_loan_product_type, lar.derived_dwelling_category, lar.derived_ethnicity, lar.derived_race, lar.derived_sex, lar.applicant_age, lar.applicant_age_above_62, lar.tract_population, lar.tract_minority_population_percent
+)
+SELECT *
+FROM RankedData
+WHERE (year = '2018' AND state_code IN ('VA', 'MD', 'DC') AND row_num <= 10000)
+   OR (year = '2019' AND state_code IN ('VA', 'MD', 'DC') AND row_num <= 10000)
+   OR (year = '2020' AND state_code IN ('VA', 'MD', 'DC') AND row_num <= 10000)
+   OR (year = '2021' AND state_code IN ('VA', 'MD', 'DC') AND row_num <= 10000)
+   OR (year = '2022' AND state_code IN ('VA', 'MD', 'DC') AND row_num <= 10000);
+
+#Panel_2018_2022
+SELECT
+    hp18.activity_year,
+    hp18.agency_code,
+    hp18.respondent_rssd,
+    hp18.respondent_name,
+    hp18.respondent_state,
+    hp18.respondent_city,
+    hp18.assets,
+    hp18.tax_id
+FROM
+    hmda_public.panel_2018 hp18
+UNION ALL
+SELECT
+    hp19.activity_year,
+    hp19.agency_code,
+    hp19.respondent_rssd,
+    hp19.respondent_name,
+    hp19.respondent_state,
+    hp19.respondent_city,
+    hp19.assets,
+    hp19.tax_id
+FROM
+    hmda_public.panel_2019 hp19
+UNION ALL
+SELECT
+    hp20.activity_year,
+    hp20.agency_code,
+    hp20.respondent_rssd,
+    hp20.respondent_name,
+    hp20.respondent_state,
+    hp20.respondent_city,
+    hp20.assets,
+    hp20.tax_id
+FROM
+    hmda_public.panel_2020 hp20
+UNION ALL
+SELECT
+    hp21.activity_year,
+    hp21.agency_code,
+    hp21.respondent_rssd,
+    hp21.respondent_name,
+    hp21.respondent_state,
+    hp21.respondent_city,
+    hp21.assets,
+    hp21.tax_id
+FROM
+    hmda_public.panel_2021 hp21
+UNION ALL
+SELECT
+    hp22.activity_year,
+    hp22.agency_code,
+    hp22.respondent_rssd,
+    hp22.respondent_name,
+    hp22.respondent_state,
+    hp22.respondent_city,
+    hp22.assets,
+    hp22.tax_id
+FROM
+    hmda_public.panel_2021 hp22;
+
+#HMDA_ts_2018_2022
+SELECT *
+FROM
+    hmda_public.ts_2018
+UNION ALL
+SELECT *
+FROM
+    hmda_public.ts_2019
+UNION ALL
+SELECT *
+FROM
+    hmda_public.ts_2020
+UNION ALL
+SELECT *
+FROM
+    hmda_public.ts_2021
+	UNION ALL
+SELECT *
+FROM
+    hmda_public.ts_2022;
