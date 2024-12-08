@@ -1,0 +1,17 @@
+
+python -m venv .venv
+pip install pandas
+pip install psycopg2
+pip install numpy
+pip install matplotlib
+pip install connect
+pip install seaborn
+pip install plotly
+pip install nbformat
+pip install nbformat
+pip install plotly.express
+pip install plotly.express
+pip install folium
+pip install geopy
+-m pip install geopy
+
